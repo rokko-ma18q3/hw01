@@ -1,0 +1,60 @@
+---
+title: 'hw01: Set-up'
+author: | 
+  | Your Name^[Email: ]
+  | Affiliation
+date: '`r format(Sys.time(), "%Y/%m/%d")`'
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    includes:
+      in_header: asset/latex/custom.sty
+    keep_tex: no
+    latex_engine: pdflatex
+    number_sections: yes
+    template: null
+    toc: no
+  bookdown::html_document2: default
+documentclass: scrartcl
+link-citations: yes
+bibliography: asset/bib/packages.bib
+biblio-style: apalike
+---
+
+# Example: R code and output in a document
+
+```{r}
+library(tidyverse)
+(iris_tbl <- as_data_frame(iris))
+```
+
+The raw output of R is not very beautiful for PDF. You probably want to use `knitr::kable()` function of **knitr** package [@R-knitr] to print a table. Table \@ref(tab:iris-print) is produced by the following code.
+
+```{r iris-print}
+knitr::kable(head(iris_tbl, 10), caption = "Iris dataset")
+```
+
+The following code generates and print Figure \@ref(fig:iris).^[See http://stackoverflow.com/questions/38861041/knitr-rmarkdown-latex-how-to-cross-reference-figures-and-tables/38884378#38884378]
+
+```{r iris, fig.cap="Iris Data", fig.align='center', fig.width=4, fig.height=3}
+ggplot(iris_tbl) + 
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species)) 
+```
+
+
+# Example: Mathematical expressions using LaTeX
+
+You can produce mathematical equations using LaTeX syntax: 
+
+\begin{equation}
+f(x) = f(0) + \int_0^x f'(y) dy.  (\#eq:ftc)
+\end{equation}
+
+
+Cross reference works like Equation \@ref(eq:ftc) but the syntactic rule is different from LaTeX. 
+See [https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations) for more detail.
+
+
+# References {-}
+
+
