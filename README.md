@@ -1,7 +1,7 @@
-# hw01: Macroeconomics (2017Q4)
+# hw01: Macroeconomics (2018Q3)
 
-Publish: 2018/04/06
-Suggested Deadline: 2018/04/13
+Publish: 2018/10/02
+Suggested Deadline: 2018/10/09
 
 ## Goal
 
@@ -11,7 +11,7 @@ Suggested Deadline: 2018/04/13
 
 ## Assignment
 
-Read [`problem.pdf`](https://rawgit.com/rokko-ma18q1/hw01/master/problem.pdf) and follow the instructions to edit and knit `solution.Rmd` to produce `solution.pdf`. Commit all the related files, push them and then open a Pull Request by the deadline. 
+Read [`problem.pdf`](https://rawgit.com/rokko-ma18q3/hw01/master/problem.pdf) and follow the instructions to edit and knit `solution.Rmd` to produce `solution.pdf`. Commit all the related files, push them and then open a Pull Request by the deadline. 
 
 ## Need help?
 
